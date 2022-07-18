@@ -4,7 +4,7 @@ description: 'This is a demo using DynamoDB on AWS on a Serverless Network handl
 framework: v3
 platform: AWS
 language: nodeJS
-authorLink: ''
+authorLink: 'https://github.com/Arutemisu/'
 authorName: 'Tal Shachar.'
 -->
 
@@ -33,7 +33,7 @@ serverless deploy
 It is also possible to emulate API Gateway and Lambda locally using the `serverless-offline` plugins. In order to do that, run:
 
 ```bash
-serverless offline start
+serverless offline --httpPort 8000 start
 ```
 
 

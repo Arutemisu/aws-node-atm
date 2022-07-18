@@ -53,7 +53,7 @@ app.get("/atm", async function (req, res) {
   try {
     const Items = await dynamoDbClient.scan(params).promise(); //This returns only 1MB of data, if we want to query more, we will have to add LastEvaluatedKey to our query
     if (Items) {
-      res.json(Items.Items);
+      res.json(Items.Items/*, LastEvaluatedKey */);
     } else {
       res
         .status(404)
